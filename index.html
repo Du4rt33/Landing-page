@@ -2,29 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Geladinhos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Geladinho Gourmet</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para os ícones -->
 </head>
 <body>
   <main class="container">
-    <img id="imagem" src="" alt="Imagem do produto" />
-    <h1 id="titulo">Carregando título...</h1>
-    <p id="descricao">Carregando descrição...</p>
-    <a id="botao" href="#" target="_blank">Botão</a>
+    <img id="logo" src="" alt="Logo Geladinho Gourmet" />
+    <h2 id="titulo"></h2>
+    <h1 id="subtitulo"></h1>
+
+    <div class="video-container">
+      <a href="" target="_blank" id="video-link" aria-label="Assistir vídeo">
+        <img id="imagem-capa" src="" alt="Capa do vídeo" />
+        <div class="play-button">&#9658;</div>
+      </a>
+    </div>
+
+    <a id="botao" href="#" target="_blank"></a>
+
+    <section class="beneficios">
+      <div class="beneficio">
+        <i class="far fa-gem"></i>
+        <h3>MAIS DE 6 MIL ALUNAS</h3>
+        <p>Nosso curso acumula mais de 6 mil alunos lucrando com nossas receitas e nossos ensinamentos.</p>
+      </div>
+    </section>
   </main>
 
   <script>
     fetch('data/conteudo.json')
-      .then(response => response.json())
+      .then(resp => resp.json())
       .then(data => {
+        document.getElementById('logo').src = data.imagemLogo;
         document.getElementById('titulo').textContent = data.titulo;
-        document.getElementById('descricao').textContent = data.descricao;
-        document.getElementById('imagem').src = data.imagem;
-        document.getElementById('botao').textContent = data.botaoTexto;
-        document.getElementById('botao').href = data.botaoLink;
+        document.getElementById('subtitulo').textContent = data.subtitulo;
+        document.getElementById('imagem-capa').src = data.imagemCapa;
+        document.getElementById('video-link').href = data.videoUrl;
+        const botao = document.getElementById('botao');
+        botao.textContent = data.botaoTexto;
+        botao.href = data.botaoLink;
       })
-      .catch(err => console.error('Erro ao carregar JSON:', err));
+      .catch(e => console.error('Erro ao carregar conteúdo:', e));
   </script>
 </body>
 </html>
