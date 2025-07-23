@@ -1,36 +1,120 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff0f6;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(300deg, #9E00BA 1%, #FF1D70 70%);
+  color: #3C1212;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-  text-align: center;
-  padding: 2rem;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  max-width: 430px;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
 }
 
-img {
-  max-width: 100%;
-  border-radius: 12px;
+#logo {
+  max-width: 150px;
   margin-bottom: 20px;
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+h2 {
+  color: #8c1478;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+h1 {
+  color: #FF1D70;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: -2.7px;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+
+.video-container {
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.video-container img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 24, 38, 0.5);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  opacity: 0.8;
+  pointer-events: none;
+  user-select: none;
 }
 
 #botao {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #ff69b4;
+  margin-top: 30px;
+  background: linear-gradient(300deg, #FF1D70 43%, #9E00BA 78%);
   color: white;
+  padding: 12px 30px;
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -1.1px;
+  border-radius: 15px;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
+  transition: filter 0.2s;
+}
+
+#botao:hover {
+  filter: brightness(1.1);
+}
+
+.beneficios {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.beneficio {
+  background: white;
+  border: 2px solid #9E00BA;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  color: #3C1212;
+}
+
+.beneficio i {
+  font-size: 36px;
+  color: #9E00BA;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.beneficio h3 {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -1.2px;
+}
+
+.beneficio p {
+  font-weight: 500;
+  font-size: 22px;
 }
