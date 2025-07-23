@@ -1,7 +1,16 @@
 {
-  "titulo": "Aprenda a fazer Geladinhos Gourmet",
-  "descricao": "Curso online completo para aumentar sua renda com confeitaria!",
-  "imagem": "imagens/geladinho.png",
-  "botaoTexto": "Quero me inscrever",
-  "botaoLink": "https://pay.kirvano.com/SEULINK"
+  "titulo": "CONQUISTE RENDA EXTRA COM A FABRICAÇÃO DE GELADINHO GOURMET",
+  "subtitulo": "GELADINHO GOURMET",
+  "imagemLogo": "https://plrpremium.net/wp-content/uploads/2023/01/LOGO-GELADINHO-GOURMET.png",
+  "imagemCapa": "https://plrpremium.net/wp-content/uploads/2024/10/CAPA-VSL-GELADINHO.jpg",
+  "videoUrl": "https://www.youtube.com/watch?v=XHOmBV4js_E",
+  "botaoTexto": "QUERO LUCRAR COM GELADINHO GOURMET",
+  "botaoLink": "https://pay.kirvano.com/SEULINK",
+  "beneficios": [
+    {
+      "icone": "far fa-gem",
+      "titulo": "MAIS DE 6 MIL ALUNAS",
+      "descricao": "Nosso curso acumula mais de 6 mil alunos lucrando com nossas receitas e nossos ensinamentos."
+    }
+  ]
 }
