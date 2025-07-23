@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Geladinhos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <img id="imagem" src="" alt="Imagem do produto" />
+    <h1 id="titulo">Carregando título...</h1>
+    <p id="descricao">Carregando descrição...</p>
+    <a id="botao" href="#" target="_blank">Botão</a>
+  </main>
+
+  <script>
+    fetch('data/conteudo.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('titulo').textContent = data.titulo;
+        document.getElementById('descricao').textContent = data.descricao;
+        document.getElementById('imagem').src = data.imagem;
+        document.getElementById('botao').textContent = data.botaoTexto;
+        document.getElementById('botao').href = data.botaoLink;
+      })
+      .catch(err => console.error('Erro ao carregar JSON:', err));
+  </script>
+</body>
+</html>
